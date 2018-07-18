@@ -56,7 +56,7 @@ module "jenkins_green" {
 
   asg_size_min               = 0
   asg_size_desired_on_create = "${var.jenkins_green_nodes_number}"
-  asg_size_max               = 1
+  asg_size_max               = 2
   asg_load_balancers         = ["${var.jenkins_bg_active == "green" ? aws_elb.jenkins.name : "" }"]
 
   default_tags = "${var.default_tags}"
