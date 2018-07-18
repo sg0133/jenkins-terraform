@@ -2,17 +2,17 @@
 
 **Info**
 ------
-This Terraform module creates a range of resources to deliver a fully functional Jenkins Master infrastructure with some of the Blue/Green capabilities, all based on my professional Jenkins usage experience.
+This Terraform module creates a range of resources to deliver a fully functional Jenkins Master infrastructure with some of the Blue/Green capabilities.
 
 **Story**
 ------
-[Jenkins HA in AWS — a proven architecture](https://medium.com/@sebolabs/jenkins-ha-aws-cd55d82057c8)
+[Jenkins HA ]
 
 **Usage**
 ------
 ```python
 module "jenkins" {
-  source = "github.com/sebolabs/jenkins-bg-tf.git"
+  source = "github.com/sg0133/jenkins-terraform.git"
 
   project     = "lab"
   environment = "test"
@@ -30,7 +30,7 @@ module "jenkins" {
 
   ebs_volume_size = 10
   
-  jenkins_blue_version       = "2.73.1-1.1"
+  jenkins_blue_version       = "2.102.1-1.1"
   jenkins_green_version      = "latest"
   jenkins_blue_subnet_cidrs  = ["10.1.0.0/28"]
   jenkins_green_subnet_cidrs = ["10.1.0.16/28"]
@@ -57,3 +57,4 @@ TF versions tested: 0.9.11, 0.10.7
 ------
 1. microservice-tf
 2. subnets-tf
+3.
